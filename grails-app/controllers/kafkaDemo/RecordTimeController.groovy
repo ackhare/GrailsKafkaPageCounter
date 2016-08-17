@@ -1,12 +1,11 @@
 package kafkaDemo
 
 import KafkaConsumer.ConsumerDemo
-import grails.plugins.springsecurity.Secured
 import org.springframework.dao.DataIntegrityViolationException
 
-import java.util.concurrent.Executor
 import java.util.concurrent.ExecutorService
 import java.util.concurrent.Executors
+
 //@Secured('role_user')
 class RecordTimeController {
 
@@ -14,21 +13,15 @@ class RecordTimeController {
 
     def index() {
 
-       redirect(action: "list", params: params)
+        redirect(action: "list", params: params)
     }
 
 
-    def doConsume()
-    {
+    def doConsume() {
         ExecutorService executor = Executors.newSingleThreadExecutor()
-
-
         executor.execute {
-
-
-            ConsumerDemo consumerDemo=new ConsumerDemo()
-
-            Thread thread=new Thread(consumerDemo)
+            ConsumerDemo consumerDemo = new ConsumerDemo()
+            Thread thread = new Thread(consumerDemo)
             thread.start()
         }
         render 'success'
@@ -88,8 +81,8 @@ class RecordTimeController {
         if (version != null) {
             if (recordTimeInstance.version > version) {
                 recordTimeInstance.errors.rejectValue("version", "default.optimistic.locking.failure",
-                          [message(code: 'recordTime.label', default: 'RecordTime')] as Object[],
-                          "Another user has updated this RecordTime while you were editing")
+                        [message(code: 'recordTime.label', default: 'RecordTime')] as Object[],
+                        "Another user has updated this RecordTime while you were editing")
                 render(view: "edit", model: [recordTimeInstance: recordTimeInstance])
                 return
             }
