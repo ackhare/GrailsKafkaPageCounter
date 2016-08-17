@@ -23827,3 +23827,290 @@ java.lang.IllegalArgumentException: Failed to evaluate expression 'role_user'
 	at java.lang.Thread.run(Thread.java:745)
 Caused by: org.springframework.expression.spel.SpelEvaluationException: EL1008E:(pos 0): Field or property 'role_user' cannot be found on object of type 'org.springframework.security.web.access.expression.WebSecurityExpressionRoot'
 	... 3 more
+2016-08-17 14:11:49,820 [http-bio-8080-exec-5] ERROR StackTrace  - Full Stack Trace:
+org.codehaus.groovy.control.MultipleCompilationErrorsException: startup failed:
+/home/chetan/Downloads/KafkaDemo/src/groovy/KafkaConsumer/ConsumerDemo.groovy: 17: Apparent variable 'grailsApplication' was found in a static scope but doesn't refer to a local variable, static field or class. Possible causes:
+You attempted to reference a variable in the binding or an instance variable from a static context.
+You misspelled a classname or statically imported field. Please check the spelling.
+You attempted to use a method 'grailsApplication' but left out brackets in a place not allowed by the grammar.
+ @ line 17, column 33.
+       final static String TOPIC = grailsApplication.config.kafka.producer.topic
+                                   ^
+
+/home/chetan/Downloads/KafkaDemo/src/groovy/KafkaConsumer/ConsumerDemo.groovy: 17: Apparent variable 'grailsApplication' was found in a static scope but doesn't refer to a local variable, static field or class. Possible causes:
+You attempted to reference a variable in the binding or an instance variable from a static context.
+You misspelled a classname or statically imported field. Please check the spelling.
+You attempted to use a method 'grailsApplication' but left out brackets in a place not allowed by the grammar.
+ @ line 17, column 33.
+       final static String TOPIC = grailsApplication.config.kafka.producer.topic
+                                   ^
+
+2 errors
+
+	at org.codehaus.groovy.control.ErrorCollector.failIfErrors(ErrorCollector.java:309)
+	at org.codehaus.groovy.control.CompilationUnit.applyToPrimaryClassNodes(CompilationUnit.java:1054)
+	at org.codehaus.groovy.control.CompilationUnit.doPhaseOperation(CompilationUnit.java:564)
+	at org.codehaus.groovy.control.CompilationUnit.processPhaseOperations(CompilationUnit.java:542)
+	at org.codehaus.groovy.control.CompilationUnit.compile(CompilationUnit.java:519)
+	at org.codehaus.groovy.control.CompilationUnit.compile(CompilationUnit.java:498)
+	at org.codehaus.groovy.tools.FileSystemCompiler.compile(FileSystemCompiler.java:55)
+	at org.codehaus.groovy.tools.FileSystemCompiler.doCompilation(FileSystemCompiler.java:210)
+	at org.codehaus.groovy.ant.Groovyc.runCompiler(Groovyc.java:1078)
+	at org.codehaus.groovy.ant.Groovyc.compile(Groovyc.java:1129)
+	at org.codehaus.groovy.grails.compiler.Grailsc.compile(Grailsc.java:79)
+	at org.codehaus.groovy.ant.Groovyc.execute(Groovyc.java:748)
+	at org.apache.tools.ant.UnknownElement.execute(UnknownElement.java:291)
+	at sun.reflect.GeneratedMethodAccessor70.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrMethodInvoke(ReflectiveInterceptor.java:1265)
+	at org.apache.tools.ant.dispatch.DispatchUtils.execute(DispatchUtils.java:106)
+	at groovy.util.AntBuilder.performTask(AntBuilder.java:260)
+	at groovy.util.AntBuilder.nodeCompleted(AntBuilder.java:220)
+	at groovy.util.BuilderSupport.doInvokeMethod(BuilderSupport.java:147)
+	at groovy.util.AntBuilder.doInvokeMethod(AntBuilder.java:170)
+	at groovy.util.BuilderSupport.invokeMethod(BuilderSupport.java:64)
+	at org.codehaus.gant.GantBuilder.invokeMethod(GantBuilder.java:99)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.call(PogoMetaClassSite.java:45)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:120)
+	at org.codehaus.groovy.grails.compiler.GrailsProjectCompiler.compile(GrailsProjectCompiler.groovy:268)
+	at org.codehaus.groovy.grails.compiler.GrailsProjectCompiler$compile$0.callCurrent(Unknown Source)
+	at org.codehaus.groovy.grails.compiler.GrailsProjectCompiler.compile(GrailsProjectCompiler.groovy:238)
+	at org.codehaus.groovy.grails.compiler.GrailsProjectCompiler.compileAll(GrailsProjectCompiler.groovy:230)
+	at org.codehaus.groovy.grails.compiler.GrailsProjectWatcher.compileIfSource(GrailsProjectWatcher.java:273)
+	at org.codehaus.groovy.grails.compiler.GrailsProjectWatcher.access$300(GrailsProjectWatcher.java:46)
+	at org.codehaus.groovy.grails.compiler.GrailsProjectWatcher$1.onChange(GrailsProjectWatcher.java:153)
+	at org.codehaus.groovy.grails.compiler.DirectoryWatcher.fireOnChange(DirectoryWatcher.java:175)
+	at org.codehaus.groovy.grails.compiler.DirectoryWatcher.run(DirectoryWatcher.java:157)
+	at org.codehaus.groovy.grails.compiler.GrailsProjectWatcher.run(GrailsProjectWatcher.java:178)
+2016-08-17 14:11:49,835 [http-bio-8080-exec-5] ERROR StackTrace  - Full Stack Trace:
+org.codehaus.groovy.control.MultipleCompilationErrorsException: startup failed:
+/home/chetan/Downloads/KafkaDemo/src/groovy/KafkaConsumer/ConsumerDemo.groovy: 17: Apparent variable 'grailsApplication' was found in a static scope but doesn't refer to a local variable, static field or class. Possible causes:
+You attempted to reference a variable in the binding or an instance variable from a static context.
+You misspelled a classname or statically imported field. Please check the spelling.
+You attempted to use a method 'grailsApplication' but left out brackets in a place not allowed by the grammar.
+ @ line 17, column 33.
+       final static String TOPIC = grailsApplication.config.kafka.producer.topic
+                                   ^
+
+/home/chetan/Downloads/KafkaDemo/src/groovy/KafkaConsumer/ConsumerDemo.groovy: 17: Apparent variable 'grailsApplication' was found in a static scope but doesn't refer to a local variable, static field or class. Possible causes:
+You attempted to reference a variable in the binding or an instance variable from a static context.
+You misspelled a classname or statically imported field. Please check the spelling.
+You attempted to use a method 'grailsApplication' but left out brackets in a place not allowed by the grammar.
+ @ line 17, column 33.
+       final static String TOPIC = grailsApplication.config.kafka.producer.topic
+                                   ^
+
+2 errors
+
+	at org.codehaus.groovy.control.ErrorCollector.failIfErrors(ErrorCollector.java:309)
+	at org.codehaus.groovy.control.CompilationUnit.applyToPrimaryClassNodes(CompilationUnit.java:1054)
+	at org.codehaus.groovy.control.CompilationUnit.doPhaseOperation(CompilationUnit.java:564)
+	at org.codehaus.groovy.control.CompilationUnit.processPhaseOperations(CompilationUnit.java:542)
+	at org.codehaus.groovy.control.CompilationUnit.compile(CompilationUnit.java:519)
+	at org.codehaus.groovy.control.CompilationUnit.compile(CompilationUnit.java:498)
+	at org.codehaus.groovy.tools.FileSystemCompiler.compile(FileSystemCompiler.java:55)
+	at org.codehaus.groovy.tools.FileSystemCompiler.doCompilation(FileSystemCompiler.java:210)
+	at org.codehaus.groovy.ant.Groovyc.runCompiler(Groovyc.java:1078)
+	at org.codehaus.groovy.ant.Groovyc.compile(Groovyc.java:1129)
+	at org.codehaus.groovy.ant.Groovyc.execute(Groovyc.java:748)
+	at org.apache.tools.ant.UnknownElement.execute(UnknownElement.java:291)
+	at org.apache.tools.ant.dispatch.DispatchUtils.execute(DispatchUtils.java:106)
+2016-08-17 14:11:49,885 [http-bio-8080-exec-5] ERROR StackTrace  - Full Stack Trace:
+org.codehaus.groovy.control.MultipleCompilationErrorsException: startup failed:
+/home/chetan/Downloads/KafkaDemo/src/groovy/KafkaConsumer/ConsumerDemo.groovy: 17: Apparent variable 'grailsApplication' was found in a static scope but doesn't refer to a local variable, static field or class. Possible causes:
+You attempted to reference a variable in the binding or an instance variable from a static context.
+You misspelled a classname or statically imported field. Please check the spelling.
+You attempted to use a method 'grailsApplication' but left out brackets in a place not allowed by the grammar.
+ @ line 17, column 33.
+       final static String TOPIC = grailsApplication.config.kafka.producer.topic
+                                   ^
+
+/home/chetan/Downloads/KafkaDemo/src/groovy/KafkaConsumer/ConsumerDemo.groovy: 17: Apparent variable 'grailsApplication' was found in a static scope but doesn't refer to a local variable, static field or class. Possible causes:
+You attempted to reference a variable in the binding or an instance variable from a static context.
+You misspelled a classname or statically imported field. Please check the spelling.
+You attempted to use a method 'grailsApplication' but left out brackets in a place not allowed by the grammar.
+ @ line 17, column 33.
+       final static String TOPIC = grailsApplication.config.kafka.producer.topic
+                                   ^
+
+2 errors
+
+	at org.codehaus.groovy.control.ErrorCollector.failIfErrors(ErrorCollector.java:309)
+	at org.codehaus.groovy.control.CompilationUnit.applyToPrimaryClassNodes(CompilationUnit.java:1054)
+	at org.codehaus.groovy.control.CompilationUnit.doPhaseOperation(CompilationUnit.java:564)
+	at org.codehaus.groovy.control.CompilationUnit.processPhaseOperations(CompilationUnit.java:542)
+	at org.codehaus.groovy.control.CompilationUnit.compile(CompilationUnit.java:519)
+	at org.codehaus.groovy.control.CompilationUnit.compile(CompilationUnit.java:498)
+	at org.codehaus.groovy.tools.FileSystemCompiler.compile(FileSystemCompiler.java:55)
+	at org.codehaus.groovy.tools.FileSystemCompiler.doCompilation(FileSystemCompiler.java:210)
+	at org.codehaus.groovy.ant.Groovyc.runCompiler(Groovyc.java:1078)
+	at org.codehaus.groovy.ant.Groovyc.compile(Groovyc.java:1129)
+	at org.codehaus.groovy.ant.Groovyc.execute(Groovyc.java:748)
+	at org.apache.tools.ant.UnknownElement.execute(UnknownElement.java:291)
+	at org.apache.tools.ant.dispatch.DispatchUtils.execute(DispatchUtils.java:106)
+2016-08-17 14:11:49,886 [http-bio-8080-exec-5] ERROR StackTrace  - Full Stack Trace:
+org.codehaus.groovy.control.MultipleCompilationErrorsException: startup failed:
+/home/chetan/Downloads/KafkaDemo/src/groovy/KafkaConsumer/ConsumerDemo.groovy: 17: Apparent variable 'grailsApplication' was found in a static scope but doesn't refer to a local variable, static field or class. Possible causes:
+You attempted to reference a variable in the binding or an instance variable from a static context.
+You misspelled a classname or statically imported field. Please check the spelling.
+You attempted to use a method 'grailsApplication' but left out brackets in a place not allowed by the grammar.
+ @ line 17, column 33.
+       final static String TOPIC = grailsApplication.config.kafka.producer.topic
+                                   ^
+
+/home/chetan/Downloads/KafkaDemo/src/groovy/KafkaConsumer/ConsumerDemo.groovy: 17: Apparent variable 'grailsApplication' was found in a static scope but doesn't refer to a local variable, static field or class. Possible causes:
+You attempted to reference a variable in the binding or an instance variable from a static context.
+You misspelled a classname or statically imported field. Please check the spelling.
+You attempted to use a method 'grailsApplication' but left out brackets in a place not allowed by the grammar.
+ @ line 17, column 33.
+       final static String TOPIC = grailsApplication.config.kafka.producer.topic
+                                   ^
+
+2 errors
+
+	at org.codehaus.groovy.control.ErrorCollector.failIfErrors(ErrorCollector.java:309)
+	at org.codehaus.groovy.control.CompilationUnit.applyToPrimaryClassNodes(CompilationUnit.java:1054)
+	at org.codehaus.groovy.control.CompilationUnit.doPhaseOperation(CompilationUnit.java:564)
+	at org.codehaus.groovy.control.CompilationUnit.processPhaseOperations(CompilationUnit.java:542)
+	at org.codehaus.groovy.control.CompilationUnit.compile(CompilationUnit.java:519)
+	at org.codehaus.groovy.control.CompilationUnit.compile(CompilationUnit.java:498)
+	at org.codehaus.groovy.tools.FileSystemCompiler.compile(FileSystemCompiler.java:55)
+	at org.codehaus.groovy.tools.FileSystemCompiler.doCompilation(FileSystemCompiler.java:210)
+	at org.codehaus.groovy.ant.Groovyc.runCompiler(Groovyc.java:1078)
+	at org.codehaus.groovy.ant.Groovyc.compile(Groovyc.java:1129)
+	at org.codehaus.groovy.ant.Groovyc.execute(Groovyc.java:748)
+	at org.apache.tools.ant.UnknownElement.execute(UnknownElement.java:291)
+	at org.apache.tools.ant.dispatch.DispatchUtils.execute(DispatchUtils.java:106)
+2016-08-17 14:12:10,025 [http-bio-8080-exec-8] ERROR StackTrace  - Full Stack Trace:
+org.codehaus.groovy.control.MultipleCompilationErrorsException: startup failed:
+/home/chetan/Downloads/KafkaDemo/src/groovy/KafkaConsumer/ConsumerDemo.groovy: 17: Apparent variable 'grailsApplication' was found in a static scope but doesn't refer to a local variable, static field or class. Possible causes:
+You attempted to reference a variable in the binding or an instance variable from a static context.
+You misspelled a classname or statically imported field. Please check the spelling.
+You attempted to use a method 'grailsApplication' but left out brackets in a place not allowed by the grammar.
+ @ line 17, column 33.
+   
+                                   ^
+
+/home/chetan/Downloads/KafkaDemo/src/groovy/KafkaConsumer/ConsumerDemo.groovy: 17: Apparent variable 'grailsApplication' was found in a static scope but doesn't refer to a local variable, static field or class. Possible causes:
+You attempted to reference a variable in the binding or an instance variable from a static context.
+You misspelled a classname or statically imported field. Please check the spelling.
+You attempted to use a method 'grailsApplication' but left out brackets in a place not allowed by the grammar.
+ @ line 17, column 33.
+   
+                                   ^
+
+2 errors
+
+	at org.codehaus.groovy.control.ErrorCollector.failIfErrors(ErrorCollector.java:309)
+	at org.codehaus.groovy.control.CompilationUnit.applyToPrimaryClassNodes(CompilationUnit.java:1054)
+	at org.codehaus.groovy.control.CompilationUnit.doPhaseOperation(CompilationUnit.java:564)
+	at org.codehaus.groovy.control.CompilationUnit.processPhaseOperations(CompilationUnit.java:542)
+	at org.codehaus.groovy.control.CompilationUnit.compile(CompilationUnit.java:519)
+	at org.codehaus.groovy.control.CompilationUnit.compile(CompilationUnit.java:498)
+	at org.codehaus.groovy.tools.FileSystemCompiler.compile(FileSystemCompiler.java:55)
+	at org.codehaus.groovy.tools.FileSystemCompiler.doCompilation(FileSystemCompiler.java:210)
+	at org.codehaus.groovy.ant.Groovyc.runCompiler(Groovyc.java:1078)
+	at org.codehaus.groovy.ant.Groovyc.compile(Groovyc.java:1129)
+	at org.codehaus.groovy.ant.Groovyc.execute(Groovyc.java:748)
+	at org.apache.tools.ant.UnknownElement.execute(UnknownElement.java:291)
+	at org.apache.tools.ant.dispatch.DispatchUtils.execute(DispatchUtils.java:106)
+2016-08-17 14:12:10,026 [http-bio-8080-exec-8] ERROR StackTrace  - Full Stack Trace:
+org.codehaus.groovy.control.MultipleCompilationErrorsException: startup failed:
+/home/chetan/Downloads/KafkaDemo/src/groovy/KafkaConsumer/ConsumerDemo.groovy: 17: Apparent variable 'grailsApplication' was found in a static scope but doesn't refer to a local variable, static field or class. Possible causes:
+You attempted to reference a variable in the binding or an instance variable from a static context.
+You misspelled a classname or statically imported field. Please check the spelling.
+You attempted to use a method 'grailsApplication' but left out brackets in a place not allowed by the grammar.
+ @ line 17, column 33.
+   
+                                   ^
+
+/home/chetan/Downloads/KafkaDemo/src/groovy/KafkaConsumer/ConsumerDemo.groovy: 17: Apparent variable 'grailsApplication' was found in a static scope but doesn't refer to a local variable, static field or class. Possible causes:
+You attempted to reference a variable in the binding or an instance variable from a static context.
+You misspelled a classname or statically imported field. Please check the spelling.
+You attempted to use a method 'grailsApplication' but left out brackets in a place not allowed by the grammar.
+ @ line 17, column 33.
+   
+                                   ^
+
+2 errors
+
+	at org.codehaus.groovy.control.ErrorCollector.failIfErrors(ErrorCollector.java:309)
+	at org.codehaus.groovy.control.CompilationUnit.applyToPrimaryClassNodes(CompilationUnit.java:1054)
+	at org.codehaus.groovy.control.CompilationUnit.doPhaseOperation(CompilationUnit.java:564)
+	at org.codehaus.groovy.control.CompilationUnit.processPhaseOperations(CompilationUnit.java:542)
+	at org.codehaus.groovy.control.CompilationUnit.compile(CompilationUnit.java:519)
+	at org.codehaus.groovy.control.CompilationUnit.compile(CompilationUnit.java:498)
+	at org.codehaus.groovy.tools.FileSystemCompiler.compile(FileSystemCompiler.java:55)
+	at org.codehaus.groovy.tools.FileSystemCompiler.doCompilation(FileSystemCompiler.java:210)
+	at org.codehaus.groovy.ant.Groovyc.runCompiler(Groovyc.java:1078)
+	at org.codehaus.groovy.ant.Groovyc.compile(Groovyc.java:1129)
+	at org.codehaus.groovy.ant.Groovyc.execute(Groovyc.java:748)
+	at org.apache.tools.ant.UnknownElement.execute(UnknownElement.java:291)
+	at org.apache.tools.ant.dispatch.DispatchUtils.execute(DispatchUtils.java:106)
+2016-08-17 14:12:10,033 [http-bio-8080-exec-8] ERROR StackTrace  - Full Stack Trace:
+org.codehaus.groovy.control.MultipleCompilationErrorsException: startup failed:
+/home/chetan/Downloads/KafkaDemo/src/groovy/KafkaConsumer/ConsumerDemo.groovy: 17: Apparent variable 'grailsApplication' was found in a static scope but doesn't refer to a local variable, static field or class. Possible causes:
+You attempted to reference a variable in the binding or an instance variable from a static context.
+You misspelled a classname or statically imported field. Please check the spelling.
+You attempted to use a method 'grailsApplication' but left out brackets in a place not allowed by the grammar.
+ @ line 17, column 33.
+   
+                                   ^
+
+/home/chetan/Downloads/KafkaDemo/src/groovy/KafkaConsumer/ConsumerDemo.groovy: 17: Apparent variable 'grailsApplication' was found in a static scope but doesn't refer to a local variable, static field or class. Possible causes:
+You attempted to reference a variable in the binding or an instance variable from a static context.
+You misspelled a classname or statically imported field. Please check the spelling.
+You attempted to use a method 'grailsApplication' but left out brackets in a place not allowed by the grammar.
+ @ line 17, column 33.
+   
+                                   ^
+
+2 errors
+
+	at org.codehaus.groovy.control.ErrorCollector.failIfErrors(ErrorCollector.java:309)
+	at org.codehaus.groovy.control.CompilationUnit.applyToPrimaryClassNodes(CompilationUnit.java:1054)
+	at org.codehaus.groovy.control.CompilationUnit.doPhaseOperation(CompilationUnit.java:564)
+	at org.codehaus.groovy.control.CompilationUnit.processPhaseOperations(CompilationUnit.java:542)
+	at org.codehaus.groovy.control.CompilationUnit.compile(CompilationUnit.java:519)
+	at org.codehaus.groovy.control.CompilationUnit.compile(CompilationUnit.java:498)
+	at org.codehaus.groovy.tools.FileSystemCompiler.compile(FileSystemCompiler.java:55)
+	at org.codehaus.groovy.tools.FileSystemCompiler.doCompilation(FileSystemCompiler.java:210)
+	at org.codehaus.groovy.ant.Groovyc.runCompiler(Groovyc.java:1078)
+	at org.codehaus.groovy.ant.Groovyc.compile(Groovyc.java:1129)
+	at org.codehaus.groovy.ant.Groovyc.execute(Groovyc.java:748)
+	at org.apache.tools.ant.UnknownElement.execute(UnknownElement.java:291)
+	at org.apache.tools.ant.dispatch.DispatchUtils.execute(DispatchUtils.java:106)
+2016-08-17 14:12:10,034 [http-bio-8080-exec-8] ERROR StackTrace  - Full Stack Trace:
+org.codehaus.groovy.control.MultipleCompilationErrorsException: startup failed:
+/home/chetan/Downloads/KafkaDemo/src/groovy/KafkaConsumer/ConsumerDemo.groovy: 17: Apparent variable 'grailsApplication' was found in a static scope but doesn't refer to a local variable, static field or class. Possible causes:
+You attempted to reference a variable in the binding or an instance variable from a static context.
+You misspelled a classname or statically imported field. Please check the spelling.
+You attempted to use a method 'grailsApplication' but left out brackets in a place not allowed by the grammar.
+ @ line 17, column 33.
+   
+                                   ^
+
+/home/chetan/Downloads/KafkaDemo/src/groovy/KafkaConsumer/ConsumerDemo.groovy: 17: Apparent variable 'grailsApplication' was found in a static scope but doesn't refer to a local variable, static field or class. Possible causes:
+You attempted to reference a variable in the binding or an instance variable from a static context.
+You misspelled a classname or statically imported field. Please check the spelling.
+You attempted to use a method 'grailsApplication' but left out brackets in a place not allowed by the grammar.
+ @ line 17, column 33.
+   
+                                   ^
+
+2 errors
+
+	at org.codehaus.groovy.control.ErrorCollector.failIfErrors(ErrorCollector.java:309)
+	at org.codehaus.groovy.control.CompilationUnit.applyToPrimaryClassNodes(CompilationUnit.java:1054)
+	at org.codehaus.groovy.control.CompilationUnit.doPhaseOperation(CompilationUnit.java:564)
+	at org.codehaus.groovy.control.CompilationUnit.processPhaseOperations(CompilationUnit.java:542)
+	at org.codehaus.groovy.control.CompilationUnit.compile(CompilationUnit.java:519)
+	at org.codehaus.groovy.control.CompilationUnit.compile(CompilationUnit.java:498)
+	at org.codehaus.groovy.tools.FileSystemCompiler.compile(FileSystemCompiler.java:55)
+	at org.codehaus.groovy.tools.FileSystemCompiler.doCompilation(FileSystemCompiler.java:210)
+	at org.codehaus.groovy.ant.Groovyc.runCompiler(Groovyc.java:1078)
+	at org.codehaus.groovy.ant.Groovyc.compile(Groovyc.java:1129)
+	at org.codehaus.groovy.ant.Groovyc.execute(Groovyc.java:748)
+	at org.apache.tools.ant.UnknownElement.execute(UnknownElement.java:291)
+	at org.apache.tools.ant.dispatch.DispatchUtils.execute(DispatchUtils.java:106)

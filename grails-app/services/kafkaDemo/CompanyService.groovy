@@ -8,6 +8,7 @@ import org.springframework.transaction.annotation.Transactional
 class CompanyService {
     def springSecurityService
 
+    def grailsApplication
     def getAllCompany() {
 
         def companies
@@ -55,9 +56,10 @@ class CompanyService {
         Producer<String, String> producer = new Producer<String, String>(producerConfig);
 
         String str = ''
+        String topic = grailsApplication.config.kafka.producer.topic
         if (springSecurityService.isLoggedIn())
             str = "inTime::${recordTime.pageVisited},outTime::${recordTime.pageLeft},timeSpent::${recordTime.timeSpentOnPage.toString()},current_url::${recordTime.currentUrl},referral_url::${recordTime.referrerUrl},current_user::${recordTime.user.username}"
-        KeyedMessage<String, String> message = new KeyedMessage<String, String>("roo", str);
+        KeyedMessage<String, String> message = new KeyedMessage<String, String>(topic, str);
         producer.send(message);
         producer.close();
     }

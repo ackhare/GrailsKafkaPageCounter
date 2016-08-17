@@ -6,7 +6,10 @@ import kafka.consumer.ConsumerIterator
 import kafka.consumer.KafkaStream
 import kafka.javaapi.consumer.ConsumerConnector
 import kafkaDemo.RecordTime
+import org.codehaus.groovy.grails.commons.ApplicationHolder
 import org.example.SecUser
+import org.codehaus.groovy.grails.web.context.ServletContextHolder as SCH
+import org.codehaus.groovy.grails.web.servlet.GrailsApplicationAttributes as GA
 
 /**
  * Created by chetan on 16/8/16.
@@ -14,7 +17,7 @@ import org.example.SecUser
 class ConsumerDemo implements Runnable {
 
     final static String clientId = "SimpleConsumerDemoClient";
-    final static String TOPIC = "roo";
+
     ConsumerConnector consumerConnector;
     private volatile String str
 
@@ -30,13 +33,15 @@ class ConsumerDemo implements Runnable {
 
     @Override
     public void run() {
+        def ctx = SCH.servletContext.getAttribute(GA.APPLICATION_CONTEXT)
         Map<String, Integer> topicCountMap = new HashMap<String, Integer>();
-        topicCountMap.put(TOPIC, new Integer(1));
-
-        Map<String, List<KafkaStream<byte[], byte[]>>> consumerMap = consumerConnector.createMessageStreams(topicCountMap);
-
-        KafkaStream<byte[], byte[]> stream = consumerMap.get(TOPIC).get(0);
         def companyService = ctx.companyService
+        def grailsApplication =  ApplicationHolder.application
+        String topic = grailsApplication.config.kafka.producer.topic
+        topicCountMap.put(topic, new Integer(1));
+        Map<String, List<KafkaStream<byte[], byte[]>>> consumerMap = consumerConnector.createMessageStreams(topicCountMap);
+        KafkaStream<byte[], byte[]> stream = consumerMap.get(topic).get(0)
+        println topic
         ConsumerIterator<byte[], byte[]> itrate = stream.iterator();
         while (itrate.hasNext()) {
             str = new String(itrate.next().message())
