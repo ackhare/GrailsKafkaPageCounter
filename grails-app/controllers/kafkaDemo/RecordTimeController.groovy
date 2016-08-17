@@ -107,6 +107,7 @@ class RecordTimeController {
             return
         }
 
+
         try {
             recordTimeInstance.delete(flush: true)
             flash.message = message(code: 'default.deleted.message', args: [message(code: 'recordTime.label', default: 'RecordTime'), id])
