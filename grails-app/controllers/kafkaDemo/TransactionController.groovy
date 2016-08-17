@@ -2,7 +2,7 @@ package kafkaDemo
 
 import grails.plugins.springsecurity.Secured
 import org.springframework.dao.DataIntegrityViolationException
-//@Secured('role_user')
+@Secured(["hasRole('role_user')"])
 class TransactionController {
 
     def transcationsService

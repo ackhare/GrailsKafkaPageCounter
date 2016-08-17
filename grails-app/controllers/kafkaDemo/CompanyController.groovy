@@ -1,12 +1,13 @@
 package kafkaDemo
 
+import grails.plugins.springsecurity.Secured
 import org.codehaus.groovy.grails.web.servlet.HttpHeaders
 import org.example.SecUser
 import org.springframework.dao.DataIntegrityViolationException
 
 import java.util.concurrent.TimeUnit
 
-//@Secured(['role_user'])
+@Secured(["hasRole('role_user')"])
 class CompanyController {
 
     def companyService

@@ -94,3 +94,14 @@ log4j = {
 grails.plugins.springsecurity.userLookup.userDomainClassName = 'org.example.SecUser'
 grails.plugins.springsecurity.userLookup.authorityJoinClassName = 'org.example.SecUserSecRole'
 grails.plugins.springsecurity.authority.className = 'org.example.SecRole'
+grails.plugin.springsecurity.useSecurityEventListener = true
+grails.plugin.springsecurity.controllerAnnotations.staticRules = [
+   '/':               ['permitAll'],
+   '/index':          ['permitAll'],
+   '/index.gsp':      ['permitAll'],
+   '/assets/**':      ['permitAll'],
+   '/**/js/**':       ['permitAll'],
+   '/**/css/**':      ['permitAll'],
+   '/**/images/**':   ['permitAll'],
+   '/**/favicon.ico': ['permitAll']
+]

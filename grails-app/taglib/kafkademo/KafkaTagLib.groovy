@@ -22,4 +22,20 @@ class KafkaTagLib {
 
             }
 
+    def isLoggedIn = { attr,body ->
+        if (springSecurityService.isLoggedIn())
+            out << body()
+
+
+    }
+
+
+    def isNotLoggedIn = { attr,body ->
+        if (!springSecurityService.isLoggedIn())
+            out << body()
+
+
+    }
+
+
 }

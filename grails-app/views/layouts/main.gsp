@@ -18,8 +18,23 @@
 		<r:layoutResources />
 	</head>
 	<body>
-	<span style="font-size: 20px;font-weight: bold"><kf:currentStatus/></span>
-		<div id="grailsLogo" role="banner"><a href="http://grails.org"><img src="${resource(dir: 'images', file: 'grails_logo.png')}" alt="Grails"/></a></div>
+	<div style="width:100%">
+	%{--<span style="align:left" style="font-size: 20px;font-weight: bold"><kf:currentStatus/></span>--}%
+<kf:isLoggedIn>
+	<span style="margin-left: 750px;" style="font-size: 20px;font-weight: bold">Welcome <kf:currentUser/></span>
+	|
+	 <g:link controller="logout" action="index">Logout</g:link>
+
+</kf:isLoggedIn>
+
+		<kf:isNotLoggedIn>
+
+			<g:link style="margin-left: 850px;" controller="login" action="index">Login</g:link>
+
+		</kf:isNotLoggedIn>
+
+	</div>
+	<div id="grailsLogo" role="banner"><a href="http://grails.org"><img src="${resource(dir: 'images', file: 'grails_logo.png')}" alt="Grails"/></a></div>
 		<g:layoutBody/>
 		<div class="footer" role="contentinfo"></div>
 		<div id="spinner" class="spinner" style="display:none;"><g:message code="spinner.alt" default="Loading&hellip;"/></div>

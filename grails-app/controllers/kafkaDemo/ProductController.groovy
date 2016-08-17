@@ -14,7 +14,7 @@ import org.springframework.dao.DataIntegrityViolationException
 
 import java.util.concurrent.ExecutorService
 import java.util.concurrent.Executors
-//@Secured('role_user')
+@Secured(["hasRole('role_user')"])
 class ProductController {
 
     def productService

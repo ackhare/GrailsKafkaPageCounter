@@ -1,12 +1,13 @@
 package kafkaDemo
 
 import KafkaConsumer.ConsumerDemo
+import grails.plugins.springsecurity.Secured
 import org.springframework.dao.DataIntegrityViolationException
 
 import java.util.concurrent.ExecutorService
 import java.util.concurrent.Executors
 
-//@Secured('role_user')
+@Secured(["hasRole('role_user')"])
 class RecordTimeController {
 
     static allowedMethods = [save: "POST", update: "POST", delete: "POST"]
